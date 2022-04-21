@@ -1,0 +1,165 @@
+/* Chris' Weapon Analyzer | Highlights Trash | Update Version: #0001 */
+is:weapon (is:sunset or is:blue or -(is:exotic or tag:keep))
+(
+    /* Keep at least one Osmosis weapon of each type  */
+    (is:dupelower perkname:"osmosis")
+    or
+    /* Keep at least one Adaptive Munitions weapon of each type */
+    (is:dupelower perkname:"adaptive munitions")
+    or
+    /* Any non-crafted versions of craftable weapons */
+    (is:craftable -is:crafted)
+    or
+    /* Non-craftable versions of craftable weapons (Same gun type, same damage type, same archetype) */
+    (
+        -is:craftable
+        (
+            /* Auto Rifles */
+            (
+                is:autorifle
+                (
+                    /* Come to Pass */
+                    (is:arc perkname:"High-Impact Frame")
+                    or
+                    /* Sweet Sorrow */
+                    (is:arc perkname:"Rapid-Fire Frame")
+                )
+            )
+            or
+            /* Combat Bows */
+            (
+                is:bow
+                (
+                    /* Fel Taradiddle */
+                    (is:kinetic perkname:"Lightweight Frame")
+                    or
+                    /* Under Your Skin */
+                    (is:void perkname:"Precision Frame")
+                )
+            )
+            or
+            /* Fusion Rifles */
+            (
+                is:fusionrifle
+                (
+                    /* Deliverance */
+                    (is:stasis perkname:"Precision Frame")
+                    or
+                    /* Likely Suspect */
+                    (is:void perkname:"Rapid-Fire Frame")
+                )
+            )
+            or
+            /* Grenade Launchers */
+            (
+                is:grenadelauncher
+                (
+                    /* Explosive Personality */
+                    (is:special is:solar perkname:"Wave Frame")
+                    or
+                    /* Forbearance */
+                    (is:special is:arc perkname:"Wave Frame")
+                    or
+                    /* Tarnation */
+                    (is:power is:arc perkname:"Rapid-Fire Frame")
+                )
+            )
+            or
+            /* Linear Fusion Rifles */
+            (
+                is:linearfusionrifle
+                (
+                    /* Cataclysmic */
+                    (is:power is:solar perkname:"Precision Frame")
+                )
+            )
+            or
+            /* Machine Guns */
+            (
+                is:machinegun
+                (
+                    /* Recurrent Impact */
+                    (is:power is:stasis perkname:"Rapid-Fire Frame")
+                )
+            )
+            or
+            /* Pulse Rifles */
+            (
+                is:pulserifle
+                (
+                    /* Insidious */
+                    (is:arc perkname:"Aggressive Burst")
+                    or
+                    /* Piece of Mind */
+                    (is:kinetic perkname:"Rapid-Fire Frame")
+                    or
+                    /* Syncopation-53 */
+                    (is:stasis perkname:"Adaptive Frame")
+                )
+            )
+            or
+            /* Rocket Launchers */
+            (
+                is:rocketlauncher
+                (
+                    /* Palmyra-B */
+                    (is:stasis perkname:"Häkke Precision Frame")
+                    or
+                    /* Red Herring */
+                    (is:void perkname:"Adaptive Frame")
+                )
+            )
+            or
+            /* Scout Rifles */
+            (
+                is:scoutrifle
+                (
+                    /* Pointed Inquiry */
+                    (is:void perkname:"High-Impact Frame")
+                )
+            )
+            or
+            /* Shotguns */
+            (
+                is:shotgun
+                (
+                    /* Ragnhild-D */
+                    (is:kinetic perkname:"Aggressive Frame")
+                )
+            )
+            or
+            /* Sidearms */
+            (
+                is:sidearm
+                (
+                    /* Empirical Evidence */
+                    (is:kinetic perkname:"Aggressive Burst")
+                )
+            )
+            or
+            /* Sniper Rifles */
+            (
+                is:sniperrifle
+                (
+                    /* Father's Sins */
+                    (is:void perkname:"Rapid-Fire Frame")
+                    or
+                    /* Thoughtless */
+                    (is:stasis perkname:"Adaptive Frame")
+                )
+            )
+            or
+            /* Submachine Guns */
+            (
+                is:submachine
+                (
+                    /* Forensic Nightmare */
+                    (is:stasis perkname:"Precision Frame")
+                    or
+                    /* Submission */
+                    (is:kinetic perkname:"Lightweight Frame")
+                )
+            )
+        )
+    )
+)

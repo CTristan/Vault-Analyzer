@@ -9,3 +9,5 @@ Makes the following adjustments based on my personal playstyle:
 
 2. Does not exclude masterworked armor or armor that is max power/pinnacle cap.
     - Reason: Just because a particular piece is masterworked or dropped at max power doesn't mean that it's worth using. If a masterworked piece doesn't meet the criteria then I want to dismantle it to use the materials to masterwork a better piece.
+
+I also added a basic weapon analyzer based off of my preferences.
