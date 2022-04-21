@@ -1,4 +1,4 @@
-/* TMMania's Vault Analyzer End-Game Edition | Highlights Trash | Keeps Top 2.5% Armor |
+/* Customized TMMania's Vault Analyzer End-Game Edition | Highlights Trash | Keeps Top 2.5% Armor |
 Update Version: #0038 */
 (
 (
@@ -7,7 +7,7 @@ Update Version: #0038 */
 	)
 or
   (
-	(is:armor -is:exotic -is:classitem)
+	(is:armor -(is:exotic -is:dupelower) -is:classitem)
 
 	-(source:raid -is:dupelower -source:dcv)
 
@@ -30,5 +30,5 @@ or
 or
 	((is:armor or is:weapon) and (is:common or is:uncommon))
 )
--(is:tagged -tag:junk) -is:maxpower -power:pinnaclecap -is:inloadout -is:masterwork -(is:armor -is:armor2.0) -(is:armor source:events)
+-(is:tagged -tag:junk) -is:inloadout -(is:armor -is:armor2.0) -(is:armor source:events)
 )  or (tag:junk -is:maxpowerloadout)
